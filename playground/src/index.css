@@ -6,7 +6,7 @@ html, body {
   margin: 0;
 }
 
-p {
+div {
   font-family: 'Roboto';
   font-weight: 300;
   font-size: 12px;
@@ -31,15 +31,59 @@ p {
   z-index: -100;
 }
 
-.picker {
+.picker-wrapper {
+  height: 100%;
+  width: 300px;
   display: flex;
   justify-content: center;
   align-items: center;
-  flex-direction: column;
-  width: fit-content;
+  float: left;
+}
+
+.picker {
+  height: min-content;
+}
+
+.text {
+  padding: 15px 0;
+  width: 100%;
+  text-align: center;
 }
 
 .pickerBlock {
   background-color: white;
   box-shadow: rgba(0, 0, 0, 0.3) 0px 0px 2px, rgba(0, 0, 0, 0.3) 0px 4px 8px;
+}
+
+.title {
+  float: left;
+  font-weight: 300;
+  font-size: 3em;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  position: relative;
+  top: 100%;
+  transform: translateY(-100%);
+  padding-bottom: 25px;
+  margin: 0;
+}
+
+.code-wrapper {
+  float: right;
+  position: relative;
+  top: 100%;
+  transform: translateY(-100%);
+  padding-bottom: 25px;
+  padding-right: 50px;
+  margin: 0;
+}
+
+.content-wrapper {
+  height: 100%;
+  float: left;
+  width: calc(100% - 300px);
+}
+
+.top-half, .bot-half {
+  height: 50%;
 }
