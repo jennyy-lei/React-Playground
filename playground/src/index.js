@@ -43,12 +43,18 @@ class Component extends React.Component {
 				color: {
 					background: `rgba(${ this.state.color.rgb.r }, ${ this.state.color.rgb.g }, ${ this.state.color.rgb.b }, ${ this.state.color.rgb.a })`,
 				},
+				noBg: {
+					background: `rgba(0, 0, 0, 0)`,
+				}
 			},
 		});
 		return(
-			<div style= { styles.color }>
-				<BlockPicker color={ this.state.color.rgb } onChange={ this.handleChange } />
-				<ChromePicker color={ this.state.color.rgb } onChange={ this.handleChange } />
+			<div className='wrapper'>
+				<div className='background' style={ styles.color } />
+				<div className='picker'>
+					<ChromePicker className='pickerBlock' color={ this.state.color.rgb } onChange={ this.handleChange } />
+					<p> Chrome </p>
+				</div>
 			</div>
 		);
 	}
