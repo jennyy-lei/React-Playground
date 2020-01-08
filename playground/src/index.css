@@ -87,3 +87,29 @@ div {
 .top-half, .bot-half {
   height: 50%;
 }
+
+.stack-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: fit-content;
+}
+
+.table-cell {
+  color: black;
+  padding: 5px 15px;
+  text-align: right;
+}
+
+.square {
+  /*display: block;*/
+  border: none;
+  font-size: 24px;
+  font-weight: bold;
+  line-height: 34px;
+  margin: 1px;
+  text-align: center;
+  height: 34px;
+  width: 34px;
+}
